@@ -9,3 +9,14 @@ def rotateArrayClockwise(arr):
 
 arr = [1, 2, 3, 4, 5]
 print(rotateArrayClockwise(arr))
+#Rotate array right by k steps using shifting or reversal (O(1) space)
+def rotateArrayKtimes(arr , k):
+    n = len(arr)
+    k = k % n
+    for i in range(k):
+        rotateArrayClockwise(arr)
+    return arr
+
+arr = [1, 2, 3, 4, 5]
+k = 6
+print(rotateArrayKtimes(arr, k))
